@@ -1,0 +1,130 @@
+<div class="container">
+  
+        <!-- Section: Contact v.3 -->
+        <section class="contact-section my-5" id="contact">
+  
+          <!-- Form with header -->
+          <div class="card">
+  
+            <!-- Grid row -->
+            <div class="row">
+  
+              <!-- Grid column -->
+              <div class="col">
+                <form id="contact-form" ng-app="contact" method="post">
+                  <div class="card-body form">
+  
+                    <!-- Header -->
+                    <h3 class="mt-4"><i class="fas fa-envelope pr-2"></i>Ecrivez-nous</h3>
+  
+                    <!-- Grid row -->
+                    <div class="row">
+  
+                      <!-- Grid column -->
+                      <div class="col-md-6">
+                        <div class="md-form mb-0">
+                          <input type="text" id="form-contact-name" class="form-control" name="name" [(ngModel)]="name" 
+                          required
+                          minlength="3"
+                          #nameInput="ngModel">
+                    
+                          <div class="help is-error" *ngIf="nameInput.invalid && nameInput.dirty">
+                            Name is required and needs to be at least 3 characters long.
+                          </div>
+                          <label for="form-contact-name" class="">Nom</label>
+                         
+                        </div>
+                      </div>
+                      <!-- Grid column -->
+  
+                      <!-- Grid column -->
+                      <div class="col-md-6">
+                        <div class="md-form mb-0">
+                          <input type="text" id="form-contact-email" class="form-control" name="user_email" [(ngModel)]="email" 
+                          required
+                          email
+                          #emailInput="ngModel">
+                    
+                        <div class="help is-error" *ngIf="emailInput.invalid && emailInput.dirty">
+                          Needs to be a valid email.
+                        </div>
+                          <label for="form-contact-email" class="">E-mail</label>
+                         
+                        </div>
+                      </div>
+                      <!-- Grid column -->
+  
+                    </div>
+                    <!-- Grid row -->
+  
+                    <!-- Grid row -->
+                    <div class="row">
+  
+                      <!-- Grid column -->
+                      <div class="col-md-6">
+                        <div class="md-form mb-0">
+                          <input type="text" id="form-contact-phone" class="form-control" name="user_phone" [(ngModel)]="phone" >
+                          <label for="form-contact-phone" class="">Numéro de téléphone</label>
+                        </div>
+                      </div>
+                      <!-- Grid column -->
+  
+                      <!-- Grid column -->
+                      <div class="col-md-6">
+                        <div class="md-form mb-0">
+                          <input type="text" id="form-contact-company" class="form-control" name="user_company" [(ngModel)]="company">
+                          <label for="form-contact-company" class="">Nom de votre entreprise</label>
+                        </div>
+                      </div>
+                      <!-- Grid column -->
+  
+                    </div>
+                    <!-- Grid row -->
+  
+                    <!-- Grid row -->
+                    <div class="row">
+  
+                      <!-- Grid column -->
+                      <div class="col-md-12">
+                        <div class="md-form mb-0">
+                          <textarea type="text" id="form-contact-message" class="form-control md-textarea" rows="3"
+                            name="user_message" [(ngModel)]="message"  required
+                            #messageInput="ngModel"></textarea>
+                      
+                            <div class="help is-error" *ngIf="messageInput.invalid && messageInput.dirty">
+                              Your message is required!
+                            </div>
+                            <label for="form-contact-message">Message</label>
+                        
+                          
+                        </div>
+                      </div>
+                      <!-- Grid column -->
+  
+                    </div>
+                    <!-- Grid row -->
+  
+                  </div>
+                  <div class="g-recaptcha" data-sitekey="6LeVfLkUAAAAAEft0NhairjOc4jyHphl39jlqM3N"></div>
+                  <button type="submit" class="btn btn-lg blue" ng-click="processForm()" style="border: none; color: #fff">
+                    <i class="far fa-paper-plane"></i> Envoyer
+                  </button>
+                </form>
+  
+              </div>
+            
+  
+              </div> 
+              <!-- Grid column -->
+  
+            </div>
+            <!-- Grid row -->
+            
+          
+          <!-- Form with header -->
+  
+        </section>
+        <!-- Section: Contact v.3 -->
+  
+</div>
+<script src="../../../assets/js/app.js"></script>
